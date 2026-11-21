@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    background-color: #FFFDFE;
+    color: #2A0C23;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #F8B4CD;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EC4899;
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(251, 215, 228, 0.4);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 215, 228, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(236, 72, 153, 0.16);
+  border-color: rgba(244, 127, 175, 0.6);
+}
+
+/* Gradients */
+.gradient-blush {
+  background: linear-gradient(135deg, #FDF2F5 0%, #FCE7EC 40%, #FFF5F8 100%);
+}
+
+.gradient-rose-gold {
+  background: linear-gradient(135deg, #FFF0F4 0%, #FCE7EC 50%, #FAF0E8 100%);
+}
+
+.text-gradient-pink {
+  background: linear-gradient(135deg, #BE185D 0%, #EC4899 50%, #B06443 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #C57E5B 0%, #D89E7E 50%, #BD915A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Shimmer for Highlighting */
+.shimmer-badge {
+  background: linear-gradient(90deg, #FDEBF1 0%, #FFF5F8 50%, #FDEBF1 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Aesthetic floating elements */
+.floating-petal {
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
